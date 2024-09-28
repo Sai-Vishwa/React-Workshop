@@ -8,14 +8,14 @@ export const UseStateOverview = (() => {
     const navigate = useNavigate();
     
     return (
-        <div className="bg-[#0a0a0a] min-h-screen text-[#f8fafc] leading-4">
+        <div className="bg-[#0a0a0a] px-5 md:px-0  min-h-screen text-[#f8fafc] leading-4">
             <div className="fixed bottom-8 right-8 flex space-x-6 z-50">
                 <span onClick={() => navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) - 1}`)}><PreviousButton /></span>
                 <span onClick={() => navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) + 1}`)}><NextButton /></span>
             </div>
 
             <div className="min-h-screen flex pt-16">
-                <div className="md:mx-[22%]">
+            <div className="lg:mx-[22%] md:mx-[10%]">
                     <div className="text-5xl font-bold">
                         Understanding `useState` Hook in React
                     </div>

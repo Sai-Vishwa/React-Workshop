@@ -5,17 +5,17 @@ import { useNavigate } from "react-router-dom"
 export const CleanUp = (() => {
     const navigate = useNavigate();
     return (
-        <div className="bg-[#0a0a0a] min-h-screen text-[#f8fafc] leading-4 ">
+        <div className="bg-[#0a0a0a] md:px-0 px-5 min-h-screen text-[#f8fafc] leading-4 ">
             <div className="fixed bottom-8 right-8 flex space-x-6 z-50">
                 <span onClick={() => navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) - 1}`)}><PreviousButton></PreviousButton></span>
                 <span onClick={() => navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) + 1}`)}><NextButton></NextButton></span>
             </div>
             <div className="min-h-screen flex pt-16">
-                <div className="md:mx-[22%]">
+                <div className="lg:mx-[14%] md:mx-[10%] xl:mx-[22%]">
                     <div className="text-5xl font-bold text">
                         Cleaning up the BoilerPlate Code
                     </div>
-                    <div className="mt-10 text-2xl ">
+                    <div className="mt-10 md:text-2xl text-xl">
                         <p className="">
                             When you create a new React project using Vite, it generates a considerable amount of boilerplate code by default.
                         </p>

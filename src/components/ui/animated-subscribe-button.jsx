@@ -15,7 +15,7 @@ export const AnimatedSubscribeButton = ({
     (<AnimatePresence mode="wait">
       {isSubscribed ? (
         <motion.button
-          className="relative flex z-50 border w-[200px] items-center justify-center overflow-hidden py-4 rounded-md bg-white p-[10px] outline outline-1 outline-black"
+          className="relative flex z-50 border md:w-[200px] w-[100px] items-center justify-center overflow-hidden py-4 rounded-md bg-white p-[10px] outline outline-1 outline-black"
           onClick={() => {
             setIsSubscribed(false)
             onClick()}}
@@ -33,7 +33,7 @@ export const AnimatedSubscribeButton = ({
         </motion.button>
       ) : (
         <motion.button
-          className="relative flex z-50 w-[200px] cursor-pointer items-center py-4 justify-center rounded-md border p-[10px]"
+          className="relative flex z-50 md:w-[200px] w-[100px] cursor-pointer items-center py-4 justify-center rounded-md border p-[10px]"
           style={{ backgroundColor: buttonColor, color: buttonTextColor }}
           onClick={() => setIsSubscribed(true)}
           initial={{ opacity: 0 }}

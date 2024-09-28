@@ -10,14 +10,14 @@ export function NextButton() {
       subscribeStatus={false}
       initialText={
         <span className="group inline-flex items-center">
-          Next{" "}
+          <span className="md:block hidden">Next</span>{" "}
           <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       }
       changeText={
         <span className="group text-[#000000] inline-flex items-center">
           <CheckIcon className="mr-2 size-4" />
-          Next{" "}
+          <span className="md:block hidden">Next{" "}</span>
         </span>
       }
     />

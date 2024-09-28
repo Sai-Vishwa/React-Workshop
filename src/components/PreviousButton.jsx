@@ -14,14 +14,14 @@ export function PreviousButton({direction}) {
       initialText={
         <span className="group inline-flex items-center" >
           <ChevronLeft className="mr-1 size-4 transition-transform duration-300 group-hover:-translate-x-1" />
-          {" "}Previous
+          <span className="md:block hidden">{" "}Previous</span>
         </span>
       }
       changeText={
         <span className="group inline-flex text-[#000000] items-center">
           <CheckIcon className="mr-2 size-4" />
           {" "}
-          Previous 
+          <span className="md:block hidden">Previous</span>
         </span>
       }
     />
