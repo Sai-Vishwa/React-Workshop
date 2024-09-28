@@ -2,12 +2,14 @@ import { Button } from "../components/ui/button"
 import { NextButton } from "../components/NextButton"
 import { PreviousButton } from "@/components/PreviousButton"
 import { CopyBlock, dracula } from 'react-code-blocks';
+import { useNavigate } from "react-router-dom";
 export const Setup = (() => {
+    const navigate = useNavigate();
     return (
         <div className="bg-[#0a0a0a] min-h-screen text-[#f8fafc] leading-4">
-            <div className="fixed bottom-8 right-8 flex space-x-6">
-                <PreviousButton></PreviousButton>
-                <NextButton></NextButton>
+            <div className="fixed bottom-8 right-8 flex space-x-6 z-50">
+                <span onClick={()=> navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) - 1}`)}><PreviousButton></PreviousButton></span>
+                <span onClick={()=> navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) + 1}`)}><NextButton></NextButton></span>
             </div>
             <div className="min-h-screen flex pt-16 ">
                 <div className="md:mx-[22%]">
@@ -22,11 +24,11 @@ export const Setup = (() => {
                             <p>
                                 There are two easy ways to setup the React Project locally on your system.
                             </p>
-                            <ul className="list-disc mt-3 ml-6 font-semibold">
+                            <ul className="list-disc mt-3 ml-6 ">
                                 <li>Create React App</li>
                                 <li>Vite</li>
                             </ul>
-                            <h4 className="mt-5 font-semibold">To Install Vite</h4>
+                            <h4 className="my-10 ">To setup using Vite</h4>
                             <div className="text-xl mt-2">
                                 <CopyBlock text={"npm create vite@latest"}
                                     language={"bash"}
@@ -34,14 +36,14 @@ export const Setup = (() => {
                                     wrapLongLines>
                                 </CopyBlock>
                             </div>
-                            <h3 className="font-semibold my-5">What is Vite?</h3>
+                            <h3 className=" text-4xl my-10 font-bold ">What is Vite?</h3>
                             <p>
                                 Vite is a modern build tool that provides a faster and leaner development experience for modern web projects
                             </p>
-                            <h3 className="font-semibold my-5">Vite has two key features:</h3>
+                            <h3 className=" my-7 font-bold">Vite has two key features:</h3>
                             <ul className="list-disc ml-6">
-                                <li><span className="font-bold">Instant Dev Server:</span> Unlike traditional bundlers, Vite uses native ES module imports in the browser. This results in instant server start times, regardless of the size of your application</li>
-                                <li className="mt-4"><span className="font-bold">Optimized Build:</span> Vite uses Rollup under the hood for production builds, allowing for optimized bundling, tree-shaking, and support for modern JavaScript features</li>
+                                <li><span >Instant Dev Server</span></li>
+                                <li className="mt-4"><span>Optimized Build</span></li>
                             </ul>
                         </div>
                     </div>

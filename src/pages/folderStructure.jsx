@@ -2,13 +2,18 @@ import { Button } from "../components/ui/button";
 import { NextButton } from "../components/NextButton";
 import { PreviousButton } from "@/components/PreviousButton";
 import FolderStructureimg from "@/assets/folderStructureimg.png";
+import { slideChanger } from "@/lib/slideChanger";
+import { useNavigate } from "react-router-dom";
 
 export const FolderStructure = (() => {
+    const navigate = useNavigate();
     return (
-        <div className="bg-[#0a0a0a] min-h-screen text-[#f8fafc] leading-4">
-            <div className="fixed bottom-8 right-8 flex space-x-6">
-                <PreviousButton></PreviousButton>
-                <NextButton></NextButton>
+        <div className="bg-[#0a0a0a] min-h-screen text-[#f8fafc] leading-4 ">
+            <div className="fixed bottom-8 right-8 flex space-x-6 z-50">
+                <span onClick={() => {
+                    console.log(window.location.pathname.slice(-1))
+                    navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) - 1}`)}}><PreviousButton></PreviousButton></span>
+                <span onClick={() => navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) + 1}`)}><NextButton></NextButton></span>
             </div>
             <div className="min-h-screen flex pt-16">
                 <div className="md:mx-[22%]">
@@ -19,7 +24,7 @@ export const FolderStructure = (() => {
                         <p className="text-2xl font-semibold">
                             The following structure is typical for a React project:
                         </p>
-                        <img className="mt-5"src={FolderStructureimg} alt="folderStructure" width={400} />
+                        <img className="mt-5" src={FolderStructureimg} alt="folderStructure" width={400} />
                         <div className="text-xl">
                             <h3 className="font-semibold my-5">Key Folders and Files:</h3>
                             <ul className="list-disc ml-6">
