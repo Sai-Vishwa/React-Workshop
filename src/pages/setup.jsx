@@ -8,7 +8,9 @@ export const Setup = (() => {
     return (
         <div className="bg-[#0a0a0a] min-h-screen px-5 md:px-0 text-[#f8fafc] leading-4">
             <div className="fixed bottom-8 right-8 flex space-x-6 z-50">
-                <span className="pointer-events-none" onClick={()=> navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) - 1}`)}><PreviousButton></PreviousButton></span>
+            <span onClick={() => navigate(`/`)}>
+                    <PreviousButton />
+                </span>
                 <span onClick={()=> navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) + 1}`)}><NextButton></NextButton></span>
             </div>
             <div className="min-h-screen flex pt-16 ">

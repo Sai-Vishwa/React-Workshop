@@ -82,8 +82,49 @@ const DataFetchingComponent = () => {
                                 />
                             </div>
 
-                            <p className="mt-6">
-                                For example, if you want to run an effect when a certain state variable changes, you can include it in the dependency array.
+                            <p className="mt-6">                               
+                                Let's say that you are getting the password as an input from the user and want to check whether the password matches the provided criteria 
+                            </p>
+                            <div className="text-xl mt-16">
+                                <CopyBlock
+                                    text={`import React, { useEffect, useState } from 'react';
+
+const Password = () => {
+    const [password , setpassword] = useState("");
+    const [PasswordStatus , setPasswordStatus] = useState("");
+    
+    useEffect(()=>{
+        if(password!==""){
+            if(pwd.length < 7){setPasswordStatus("Password is short!!!")}
+            else{setPasswordStatus("Password Accepted!!!")}    
+        }
+    },[password])
+
+    function changepassword(e){
+        setpassword(e.target.value);
+    }
+
+    return (
+        <>
+            <label htmlFor="password" >Enter Password</label>
+            <input type="password" id="password" onChange={changepassword} placeholder={password}/>
+            <p>{PasswordStatus}</p>
+        </>
+    )
+};`}
+                                    language={"javascript"}
+                                    theme={dracula}
+                                    wrapLongLines
+                                />
+                            </div>
+                            <p className="mt-6">               
+                                Remember the order...
+                                <ul className="list-disc ml-6 mb-16">
+                                    <li>Component mounts first i.e., rendered</li>
+                                    <li>Use Effect executes</li>
+                                    <li>Return function of Use Effect executes</li>
+                                    <li>Component demounts i.e., re-rendered</li>
+                                </ul>                
                             </p>
                         </div>
                     </div>
