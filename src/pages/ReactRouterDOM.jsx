@@ -10,7 +10,7 @@ export const ReactRouterDOM = (() => {
         <div className="bg-[#0a0a0a] px-5 md:px-0 min-h-screen text-[#f8fafc] leading-4 ">
             <div className="fixed bottom-8 right-8 flex space-x-6 z-50">
                 <span onClick={() => navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) - 1}`)}><PreviousButton /></span>
-                <span onClick={() => navigate(`/slide/11`)}><NextButton /></span>
+                <span onClick={() => navigate(`/`)}><NextButton /></span>
             </div>
             <div className="min-h-screen flex pt-16">
             <div className="lg:mx-[14%] md:mx-[10%] xl:mx-[22%]">
