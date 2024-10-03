@@ -20,12 +20,12 @@ export const FolderStructure = (() => {
                     <div className="text-5xl font-bold">
                         Understanding the Folder Structure
                     </div>
-                    <div className="mt-10">
+                    <div className="mt-10 mb-16">
                         <p className="text-xl md:text-2xl font-semibold">
                             The following structure is typical for a React project:
                         </p>
                         <img className="mt-5" src={FolderStructureimg} alt="folderStructure" width={400} />
-                        <div className="text-xl">
+                        <div className="text-xl ">
                             <h3 className="font-semibold my-5">Key Folders and Files:</h3>
                             <ul className="list-disc ml-6">
                                 <li>

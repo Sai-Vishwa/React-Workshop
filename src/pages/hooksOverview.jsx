@@ -24,7 +24,7 @@ export const HooksOverview = (() => {
                         Understanding Hooks in React
                     </div>
 
-                    <div className="mt-10">
+                    <div className="mt-10 mb-16">
                         <p className="md:text-2xl text-xl font-semibold">
                             What are Hooks in React?
                         </p>

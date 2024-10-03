@@ -13,7 +13,7 @@ export const UseMemo = (() => {
                 <span onClick={() => navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) - 1}`)}>
                     <PreviousButton />
                 </span>
-                <span onClick={() => navigate(`/`)}>
+                <span onClick={() => navigate(`/slide/${parseInt(window.location.pathname.slice(-1)) + 1}`)}>
                     <NextButton />
                 </span>
             </div>

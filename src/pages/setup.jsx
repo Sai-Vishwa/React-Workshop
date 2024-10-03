@@ -22,7 +22,7 @@ export const Setup = (() => {
                         <p className="md:text-2xl text-xl font-semibold ">
                             Pre-requisite: Make sure you have Node JS installed.
                         </p>
-                        <div className="text-xl md:text-2xl mt-6">
+                        <div className="text-xl md:text-2xl mt-6 mb-16">
                             <p>
                                 There are two easy ways to setup the React Project locally on your system.
                             </p>

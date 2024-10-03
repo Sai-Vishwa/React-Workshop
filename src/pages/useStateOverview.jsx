@@ -24,7 +24,7 @@ export const UseStateOverview = (() => {
                         <p className="text-2xl font-semibold">
                             What is `useState` in React?
                         </p>
-                        <div className="text-2xl mt-6">
+                        <div className="text-2xl mt-6 mb-16">
                             <p>
                                 The `useState` hook is a fundamental part of functional components in React. It allows you to add state to functional components, making them dynamic and interactive.
                             </p>

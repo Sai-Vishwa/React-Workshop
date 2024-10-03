@@ -15,7 +15,7 @@ export const CleanUp = (() => {
                     <div className="text-5xl font-bold text">
                         Cleaning up the BoilerPlate Code
                     </div>
-                    <div className="mt-10 md:text-2xl text-xl">
+                    <div className="mt-10 md:text-2xl text-xl mb-16">
                         <p className="">
                             When you create a new React project using Vite, it generates a considerable amount of boilerplate code by default.
                         </p>

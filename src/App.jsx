@@ -9,6 +9,7 @@ import { UseEffectOverview } from './pages/useEffectOverview';
 import { HooksOverview } from './pages/hooksOverview';
 import { UseStatePreviousState } from './pages/UseStatePreviousState';
 import { UseMemo } from './pages/UseMemo';
+import { ReactRouterDOM } from './pages/ReactRouterDOM';
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/slide/6" element={<UseStateOverview />} />
           <Route path="/slide/8" element={<UseEffectOverview />} />
           <Route path="/slide/9" element={<UseMemo />} />
+          <Route path="/slide/10" element={<ReactRouterDOM />} />
           <Route path='/slide/7' element={<UseStatePreviousState />} />
         </Routes>
       </BrowserRouter>

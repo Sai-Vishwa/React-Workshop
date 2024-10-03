@@ -54,24 +54,22 @@ const StudentDetails = () => {
                                     text={`import React, { useState } from 'react';
 
 const StudentDetails = () => {
-    const [students,setstudents] = useState({
-                                            "s1":["Shanto",263,"CSE"],
-                                            "s2":["Rakul",216,"CSE"]
-                                            });
+    const [s1,setstudent1] = useState(["Shanto",263,"CSE"]);
+    const [s2,setstudent2] = useState(["Rakul",216,"CSE"]);
     return (
             <>
-                Student 1
-                <ul>
-                    students.s1.map((item,index) =>{
-                        <li key={index}> {item} </li>
-                        })
-                </ul>
-                Student 2
-                <ul>
-                    students.s2.map((item,index) =>{
-                        <li key={index}> {item} </li>
-                        })
-                </ul>
+                <h4>Student 1</h4>
+                <p>
+                    Name - {s1[0]} <br />
+                    Rno - {s1[1]} <br />
+                    Dept - {s1[2]}
+                </p>
+                <h4>Student 2</h4>
+                <p>
+                    Name - {s2[0]} <br />
+                    Rno - {s2[1]} <br />
+                    Dept - {s2[2]}
+                </p>
             </>
             );
 };`}
@@ -93,38 +91,34 @@ const StudentDetails = () => {
                                     text={`import React, { useState } from 'react';
 
 const StudentDetails = () => {
-    const [students,setstudents] = useState({
-                                   "s1":["Shanto",263,"CSE"],
-                                   "s2":["Rakul",216,"CSE"]
-                                            });
+    const [s1,setstudent1] = useState(["Shanto",263,"CSE"]);
+    const [s2,setstudent2] = useState(["Rakul",216,"CSE"]);
 
     function changename(){
-        setstudents((previousState)=>{
-            return ({
-                "s1":previousState.s1,
-                "s2":["Rakul Prakash",previousState.s2[1],previousState.s2[2]]
-                })
-            })
+        setstudent1((previousState)=>{
+                previousState[0] = previousState[0]==="Rakul"?"Rakul Prakash":"Rakul";
+                return(previousState);
+            }
     }
 
     return (
             <>
-                Student 1
-                <ul>
-                    students.s1.map((item,index) =>{
-                        <li key={index}> {item} </li>
-                        })
-                </ul>
-                Student 2
-                <ul>
-                    students.s2.map((item,index) =>{
-                        <li key={index}> {item} </li>
-                        })
-                </ul>
-                <button onClick={changename}>Click to change name </button>
+                <h4>Student 1</h4>
+                <p>
+                    Name - {s1[0]} <br />
+                    Rno - {s1[1]} <br />
+                    Dept - {s1[2]}
+                </p>
+                <h4>Student 2</h4>
+                <p>
+                    Name - {s2[0]} <br />
+                    Rno - {s2[1]} <br />
+                    Dept - {s2[2]}
+                </p>
+                <button onClick={changename}>Change name </button>
             </>
             );
-};`}
+}`}
                                     language={"javascript"}
                                     theme={dracula}
                                     wrapLongLines

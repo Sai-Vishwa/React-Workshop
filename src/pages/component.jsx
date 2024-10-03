@@ -23,7 +23,7 @@ export const ComponentsOverview = (() => {
                         <p className="text-xl md:text-2xl font-semibold">
                             What is a Component in React?
                         </p>
-                        <div className="text-xl md:text-2xl mt-6">
+                        <div className="text-xl md:text-2xl mt-6 mb-16">
                             <p>
                                 A component in React is a reusable piece of UI. It allows you to split the UI into independent, reusable pieces and think about each piece in isolation.
                             </p>

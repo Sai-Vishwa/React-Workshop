@@ -27,7 +27,7 @@ export const UseEffectOverview = (() => {
                         <p className="text-2xl font-semibold">
                             What is `useEffect` in React?
                         </p>
-                        <div className="text-2xl mt-6">
+                        <div className="text-2xl mt-6 mb-16">
                             <p>
                                 The `useEffect` hook allows you to perform side effects in functional components. It is called after the component renders, and you can use it to fetch data, directly manipulate the DOM, or set up subscriptions.
                             </p>
@@ -95,7 +95,7 @@ const Password = () => {
     
     useEffect(()=>{
         if(password!==""){
-            if(pwd.length < 7){setPasswordStatus("Password is short!!!")}
+            if(password.length < 7){setPasswordStatus("Password is short!!!")}
             else{setPasswordStatus("Password Accepted!!!")}    
         }
     },[password])
